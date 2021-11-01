@@ -1,45 +1,41 @@
-body { color: white; 
+body {
+  color: white;
   display: flex;
   flex-flow: row-reverse wrap;
   display: grid;
-grid-gap: 8px;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-weight: 700;
+  grid-gap: 8px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
 }
 
-h2{
+h2 {
   grid-column: span 2;
   color: blanchedalmond;
-  font-size: 300%
-  
+  font-size: 300%;
 }
 
-h3{
+h3 {
   grid-column: span 2;
   font-size: xx-large;
 }
 
-img{
+img {
   width: 600px;
   height: auto;
 }
-.center{
+.center {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-
-
-
-p{
+p {
   text-align: center;
-  background-color: rgba(223, 235, 223, 0.315); 
+  background-color: rgba(223, 235, 223, 0.315);
   background-position: center;
 }
 
-footer{
+footer {
   background-color: rgba(223, 235, 223, 0.315);
-  text-align: center
-  
+  text-align: center;
 }
