@@ -1,24 +1,54 @@
 function ShowAlert(){
-    alert (" Warning! You are about to reset your inputs. Are you sure you want tocontinue?”!")
+    alert (" Warning! You are about to reset your inputs. Are you sure you want to continue?”!")
 }
 
 function Congrats(){
     alert(" Congrats! You have just made your account!")
 }
-// const form= document.getElementById ('form');
-// const name= document.getElementById ('name');
-// const email= document.getElementById ('email');
-// const password1= document.getElementById ('password1');
-// const password2= document.getElementById ('password2');
 
-// const namevalue = name.value.trim();
-// const emailvalue = email.value.trim();
-// const password1value = email.value.password1();
-// const password2value = email.value.password2();
+function validateForm(){
+  var x = document.forms["Myform"]["fname"].value;
+  var y = document.forms["Myform"]["email"].value;
+  var z = document.forms["Myform"]["password1"].value;
+  var w = document.forms["Myform"]["password2"].value;
+  
+  if (x == "" || x == null) 
+  {
+      alert("Full Name must be filled out");
+       return false;
+  }
+  else if (y == "" || y == null) 
+  {
+      alert("Email must be filled out");
+       return false;
+    }
+     else if (z == "" || z == null) 
+  {
+      alert("Password must be filled out");
+       return false;
+    }
+      else if (w == "" || w == null) 
+  {
+      alert("Check Password must be filled out");
+       return false;
+    }
+    else 
+    {
+        ShowAlert()
+    }
 
-// if ( namevalue==='' || email==='' || password1value ==='' || password2value==='')
-// EmptyAlert();
+}
+function validateSignup(){
+ var x = document.forms["Myform"]["fname"].value;
+  var y = document.forms["Myform"]["email"].value;
+  var z = document.forms["Myform"]["password1"].value;
+  var w = document.forms["Myform"]["password2"].value;
 
+  if (x== "" || y=="" || z=="" || w=="")
+  alert("Complete all the fields!")
+  else 
+  Congrats()
+}
 let sum=0;
 for(let i=1 ;i<51;i++)
 {

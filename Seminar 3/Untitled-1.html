@@ -12,10 +12,10 @@
 <div class="container">
     <h2 class="title">Create your account</h2>
     <br>
-    <form class="form" id ="form">
+    <form name="Myform" id ="form">
     <label for="name">Full Name</label>
     <br>
-    <input type="text" placeholder="name" class=central id="name">
+    <input type="text" placeholder="name" class=central id="fname">
     <br>
     <label for="email" >Email </label>
     <br>
@@ -30,9 +30,10 @@
     <input type="password"placeholder="********"class=central id="password2">  
     <br>
     <br>
-    <button for= "cancel" style="float: left" onclick="ShowAlert()"   
+    <button for= "cancel" style="float: left" id="cancel"  onclick="validateForm()"
     >Cancel</button>
-    <button for="signup" style="float: right" onclick= "Congrats()">Sign-up</button>
+    <button for="signup" style="float: right" onclick= "validateSignup()">Sign-up</button>
+    
 </form>
 </div>
 
