@@ -7,31 +7,39 @@
 # print(3-2)
 # print(3*2)
 
-# print("Finding the percentage") #incomplet pentru ca nu l-am facut in dictionary data type
+print("Finding the percentage"
+      )  #incomplet pentru ca nu l-am facut in dictionary data type
 
-# print("CAti elevi sunt?")
-# n=input()
-# i=0
-# while i<3:
-#     input(b)
-# print("Krishna 67 68 69")
-# print("Arjun 70 98 63")
-# print("MAlika 52 56 60")
-# print("Malika")
-# print()
+n = int(input("Cati elevi sunt? "))
 
-# print(
-#     "Media cui vreti sa o calculati? Putem calcula deocamdata numai media lui Krishan. Scrie Krishan!"
-# )
-# name = input()
-# if name == "Krishan":
+list = []
+i = 0
+while i < n:
+    list.append(input("Input the elements : ").split())
+    print(list[i])
+    i = i + 1
+do = True
+while do == True:
+    name = input("Media cui vreti sa o calculam? ")
+    i = 0
+    e = False
 
-#     a = (67 + 68 + 69) / 3
-#     format_a = "{:.2f}".format(a)
-#     print(format_a)
-# else:
-
-#     print(" Vrem sa calculam numai media lui Krishan")
+    while i < n:
+        if list[i][0] == name:
+            average = float(
+                (int(list[i][1]) + int(list[i][2]) + int(list[i][3])) /
+                (len(list[i]) - 1))
+            average_2decimal = "{:.2f}".format(average)
+            print("Media lui ", name, "este ", average_2decimal)
+            e = True
+        i = i + 1
+    if e == False:
+        print("Numele nu exista! ")
+    rasp = input("Doriti sa mai aflati media cuiva? Raspundeti cu da sau nu. ")
+    if rasp == "da":
+        do = True
+    else:
+        do = False
 
 # print("Python if else")
 
