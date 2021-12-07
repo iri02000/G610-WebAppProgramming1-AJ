@@ -6,6 +6,10 @@ function Congrats(){
     alert(" Congrats! You have just made your account!")
 }
 
+function Return(){
+    console.log ("Success");
+}
+
 function validateForm(){
   var x = document.forms["Myform"]["fname"].value;
   var y = document.forms["Myform"]["email"].value;
@@ -49,6 +53,7 @@ function validateSignup(){
   else 
   Congrats()
 }
+
 let sum=0;
 for(let i=1 ;i<51;i++)
 {
@@ -57,8 +62,9 @@ for(let i=1 ;i<51;i++)
 }
  console.log ("Sum of all numbers up to 50: " +sum)
 
+const greeting = function greet() {
+    console.log('Hey there clicker!');
+}
 
-
-
-
+// document.getElementById("signup").onclick = Return()
 
