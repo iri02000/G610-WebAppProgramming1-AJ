@@ -34,8 +34,9 @@ function validateSignup(){
   var y = document.forms["Myform"]["email"].value;
   var z = document.forms["Myform"]["password1"].value;
   var w = document.forms["Myform"]["password2"].value;
+  var o = document.forms["Myform"]["username"].value;
   
-  if (x== "" && y=="" && z=="" && w=="")
+  if (x== "" && y=="" && z=="" && w=="" && o=="")
     {
         alert("Complete all the fields!")
     }
@@ -63,6 +64,11 @@ function validateSignup(){
     {
         alert("Password must match the Check Password. ")
     }
+    else if (o == "")
+    {
+        alert("Write the username!")
+    }
+    
     else 
     {
         Congrats()
