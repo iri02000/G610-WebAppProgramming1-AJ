@@ -21,9 +21,10 @@ def get_users(conn):
 #     return results[0]
 
 
+#folosit la metoda POST implementat in Seminar9_api.py
 def create_user(conn, user_data):
-    query = """insert into users (id_username, first_name, last_name, email, password, created_at, last_updated, last_signed)
-     values (?, ?, ?, ?, ?,?,?,?);"""
+    query = """insert into users (first_name, last_name, email, password)
+     values (?, ?, ?, ?);"""
     cursor = conn.cursor()
     cursor.execute(query, user_data)
     conn.commit()
@@ -51,16 +52,16 @@ def update_user(conn, id_username):
 #     user = get_user_by_username(conn, "username1")
 #     pprint(user)
 
-#     # new_user_details = {
-#     #     "username": "newusername_g610_4",
-#     #     "first_name": "newuserfirstname",
-#     #     "last_name": "newuserlastname",
-#     #     "email": "newuser_g610_4@email.com",
-#     #     "password": "fdkjflksjdf48375420349823rufh"
-#     # }
-#     # push_user(conn, details=new_user_details)
-#     user = get_user_by_username(conn, "newusername_g610_4")
-#     pprint(user)
+# new_user_details = {
+#     "username": "newusername_g610_4",
+#     "first_name": "newuserfirstname",
+#     "last_name": "newuserlastname",
+#     "email": "newuser_g610_4@email.com",
+#     "password": "fdkjflksjdf48375420349823rufh"
+# }
+# push_user(conn, details=new_user_details)
+# user = get_user_by_username(conn, "newusername_g610_4")
+# pprint(user)
 
 #     delete_user(conn, "liviu")
 #     users = get_users(conn)

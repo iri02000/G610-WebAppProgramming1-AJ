@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="loggedin.css">
+
 <body>
     <section class="main">
 
@@ -7,17 +8,27 @@
             <div class="nav-wrapper">
                 <img src="/Proiect/images/logo.png" class="brand-img" alt="">
                 <input type="text" class="search-box" placeholder="search">
-                <button class="mypage" onclick="document.location='mypage.html'">My page </button>
+                <button class="mypage" onclick="document.location='post.html'" >Find businesses </button>
             </div>
         </nav>
 
 
-        <div class="wrapper" style="float: left; width: 60%;">
-            <div class="post" style="margin-right: 0%;">
+        <profile class="profile" >
+            <div class="container">
+                <img style="height: 200px; width: auto;" src="/Proiect/images/logo.png" alt="">
+                <h1 style="margin-left: 40%">username</h1>
+                <div>
+                    <p>This is where you explain what your business is about and what you are searching for</p>
+                </div>
+            </div>
+        </profile>
+
+
+        <div class="wrapper">
+            <div class="post" style="margin-top: 0px;">
                 <div class="info">
-                    <img class="profile-pic"src="/Proiect/images/logo.png" alt="">
+                    <img class="profile-pic" src="/Proiect/images/logo.png" alt="">
                     <p class="username">username</p>
-                    <button class="comment-btn" style="font-size: small" >Contact</button>  
                 </div>
                 <div> <img src="/Proiect/images/hands.gif" class="post-image" alt="">
                 </div>
@@ -31,23 +42,7 @@
                     <button class="comment-btn">post</button>
                 </div>
             </div>
-            
-        </div>
 
-
-        <div class="wrapper" style="float: right; width: 40%;" >
-            <div class="post" style="margin-left: 5%; width: 60%; padding: 1%" >
-                <div class="info">
-                    <img class="profile-pic" src="/Proiect/images/chat.png" style="width: 25px; height: auto;">
-                    <p class="username">Messenger</p>
-                </div>
-                
-                <div class="comment-wrapper" style="padding-top: 100%;">
-                    <input type="text" class="comment-box" style="padding-left: 10px;" placeholder="Send message">
-                    <button class="comment-btn">Send</button>
-                </div>
-            </div>
-        
         </div>
     </section>
 </body>
