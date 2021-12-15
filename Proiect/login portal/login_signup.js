@@ -10,8 +10,6 @@ function Return(){
     console.log ("Success");
 }
 
-
-
 function validateCancel(){
   var x = document.forms["Myform"]["fname"].value;
   var y = document.forms["Myform"]["email"].value;
@@ -114,4 +112,15 @@ function validateCancelLogin(){
         ShowAlert()
     }
 
+}
+
+
+function signin(){
+    const data ={
+    name: document.forms["Myform"]["fname"].value,
+  email:document.forms["Myform"]["email"].value,
+  username: document.forms["Myform"]["username"],value,
+  password: document.forms["Myform"]["password1"].value,
+    };
+    url = 
 }

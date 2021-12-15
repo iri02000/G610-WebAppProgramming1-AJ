@@ -1,4 +1,5 @@
 
+
 function validateSignup(){
   var firstname = document.getElementById("first_name").value;  //getElement e functie deci treb cu ()
   var lastname = document.getElementById("last_name").value;
@@ -6,46 +7,50 @@ function validateSignup(){
   var password1 = document.getElementById("password1").value;
   var password2 = document.getElementById("password2").value;
   
-  if (firstname== "" || lastname=="" || email=="" || password1=="" || password2=="")
-    {
-        alert("Complete all the fields!")
-    }
+//   if (firstname== "" || lastname=="" || email=="" || password1=="" || password2=="")
+//     {
+//         alert("Complete all the fields!")
+//     }
 
-    else if (password1 !== password2)
-    {
-        alert("Password must match the Check Password. ")
-    }
+//     else if (password1 !== password2)
+//     {
+//         alert("Password must match the Check Password. ")
+//     }
     
-    else 
-    {
+//     else 
+//     {
         signup()
         alert("You have made an account! YAY")
-        document.location.reload(true)
-    }
+        // document.location.reload(true)
+    // }
 
 }
 
 
 function signup() {
-    const data = {
-        firstname: document.getElementsByName("first_name").value,
-        lastname:document.getElementById("last_name").value,
-        email: document.getElementsByName("email").value,
-        password: document.getElementsByName("password1").value,
+       const data = {
+        firstname: document.getElementById('first_name').value,
+        lastname:document.getElementById('last_name').value,
+        email: document.getElementById('email').value,
+        password: document.getElementById('password1').value,
     }
-    url = "http://127.0.0.1:5006/users"   //luat de unde dam run la fisierul cu api nu din browser + app route
+    console.log(data)
+
+    url = "http://127.0.0.1:5006/users";   //luat de unde dam run la fisierul cu api nu din browser + app route
     params = {
         method: 'POST',
-        body: JSON.stringify(data),
+        body: JSON.stringify(data),    //make sure to stringify the body
         mode: 'cors',
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json',   //make sure to addd the header to the correct content type 
         }
-    }
-    fetch(url, params)
+    };
+    fetch(url,params)
         .then(ifSuccess)
         .then(newUserCreated)  // functiile aici sunt definite mai jos
         .catch(ifError)
+    // document.body.innerHTML= "You have made an account!"
+
 }
 
 function ifSuccess(response) {
@@ -53,7 +58,7 @@ function ifSuccess(response) {
 }
 
 function ifError(err) {
-    console.log(err)
+    console.log(err);
 }
 
 function newUserCreated(response) {
@@ -66,7 +71,7 @@ function newUserCreated(response) {
 
 function getusers()
 {
-    url = "http://127.0.0.1:5006/users"
+    url = "http://127.0.0.1:5006/users";
     response= fetch(url)
     .then (Received)
     .then(Response)
@@ -74,13 +79,13 @@ function getusers()
 }
 
 function Received(response){
-    return response.json()
+    return response.json();
 }
 
 function Response(response){
-    console.log(response)
+    console.log(response);
 }
 
 function Error(error){
-    console.log(error)
+    console.log(error);
 }

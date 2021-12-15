@@ -4,8 +4,11 @@ import sqlite3
 
 # connect to db --> connection object
 def create_connection(dbfile):
-    conn = sqlite3.connect(dbfile)
-    return conn
+    try:
+        conn = sqlite3.connect(dbfile)
+        return conn
+    except Exception as e:
+        raise e
 
 
 # get a cursor --> cursor object
