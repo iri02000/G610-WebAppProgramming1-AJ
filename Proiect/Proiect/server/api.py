@@ -1,7 +1,7 @@
 from flask import Flask, request
 from flask_cors import CORS
 
-from Proiect.database.repository import create_user, get_connection
+from repository import create_user, get_connection
 
 app = Flask("b2bapp")
 CORS(app)

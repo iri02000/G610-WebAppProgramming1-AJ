@@ -33,10 +33,10 @@ function signup() {
         lastname:document.getElementById('last_name').value,
         email: document.getElementById('email').value,
         password: document.getElementById('password1').value,
-    }
+}
     console.log(data)
 
-    url = "http://127.0.0.1:5006/users";   //luat de unde dam run la fisierul cu api nu din browser + app route
+    url = "http://localhost:5006/users";   //luat de unde dam run la fisierul cu api nu din browser + app route
     params = {
         method: 'POST',
         body: JSON.stringify(data),    //make sure to stringify the body
@@ -54,11 +54,11 @@ function signup() {
 }
 
 function ifSuccess(response) {
-    return response.json()
+    console.log("USER CREATED.");
 }
 
 function ifError(err) {
-    console.log(err);
+    console.log("Error");
 }
 
 function newUserCreated(response) {

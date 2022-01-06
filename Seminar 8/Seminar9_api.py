@@ -1,5 +1,4 @@
-from os import error
-from flask import Flask, request, make_response
+from flask import Flask, request
 from flask_cors import CORS
 from repo import create_connection, get_users, create_user, delete_user
 
@@ -16,27 +15,27 @@ def users():
 
     # GETmethod: get_users()–retrieve all users available in the databaseas a list of dictionaries with the following keys: username, first_name, last_name, email
 
-    if request.method == "GET":
-        users = get_users(conn)
-        response = request.json
-        response = [
-            response["id_username"], response["first_name"],
-            response["last_name"], response["email"]
-        ]
-        conn.close()
-        return response, 200
+    # if request.method == "GET":
+    #     users = get_users(conn)
+    #     body = request.json
+    #     response = [
+    #         response["id_username"], response["first_name"],
+    #         response["last_name"], response["email"]
+    #     ]
+    #     conn.close()
+    #     return response, 200
 
-    # POSTmethod: create_user() -create a new user and return the id of the newly created user
+    # # POSTmethod: create_user() -create a new user and return the id of the newly created user
 
     if request.method == "POST":  #creeam un user in baza de date     conectat de javascript
-        user_data = request.json  # user_details e de tip dictionar pt ca folosim jason, ia date din javascript
-        # aici am transformat din dictionar in lista pt ca functia create_user introducele datele in forma de lista
+        user_data = request.json  # user_details e de tip dictionar pt ca folosim jason, ia date din http
+        # aici am transformat din dictionar in lista pt ca functia create_user introduce datele in forma de lista
 
         details = [
-            user_data.get("first_name", None),
-            user_data.get("last_name", None),
+            user_data.get("firstname", None),
+            user_data.get("lastname", None),
             user_data.get("email", None),
-            user_data.get("password1", None)
+            user_data.get("password", None)
         ]
         try:
             create_connection(database)

@@ -87,15 +87,15 @@ def delete_user(conn, id_username):
 # data = cursor.execute(query)
 # print(f"Numner of users: { len (data)}")
 
-conn = create_connection(
-    "C:\\Users\\ARin\\OneDrive - Romanian-American University (STUD)\\Programarea aplicatiilor Web\\Seminar 1 Github guide\\G610-WebAppProgramming1-AJ\\Seminar 8\\users.db"
-)
-print(conn)
+# conn = create_connection(
+#     "C:\\Users\\ARin\\OneDrive - Romanian-American University (STUD)\\Programarea aplicatiilor Web\\Seminar 1 Github guide\\G610-WebAppProgramming1-AJ\\Seminar 8\\users.db"
+# )
+# print(conn)
 
 # insert new users
-user1 = ('User 1 Full Name', 'user1@company.com', 'password1234', 'company_id')
-user2 = ('User 2 Full Name', 'user2@company.com', 'password12345',
-         'company_id')
+# user1 = ('User 1 Full Name', 'user1@company.com', 'password1234', 'company_id')
+# user2 = ('User 2 Full Name', 'user2@company.com', 'password12345',
+#          'company_id')
 
 # user1_id = create_user(conn, user1)
 # user2_id = create_user(conn, user2)
